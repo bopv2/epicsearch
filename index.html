@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Epic Search 1.0 | Made by Itz AxonZ (github.com/bopv2)</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <div class="alert-i" id="nosearch">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Unknown search input! Couldnt continue :(
+    </div> 
+    <div class="alert-e" id="nobrowser">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Unknown browser! Couldnt continue :(
+    </div> 
+    <h1 class="t">Epic Search 1.0</h1>&nbsp; &nbsp; &nbsp; <p class="box">By AxonZ</p> <br>
+    <input id="cable"> <br><br>
+    <button onclick="ddg();" class="duckduckgo">DuckDuckGo</button>
+    <button onclick="googli();" class="google"><span style="color: #4285F4">G</span><span style="color: #DB4437">o</span><span style="color: #F4B400">o</span><span style="color: #4285F4">g</span><span style="color: #0F9D58">l</span><span style="color: #DB4437">e</span></button>
+    <button onclick="bingo();" class="bing">Bing</button>
+    <br>
+    &nbsp;
+    <br>
+    &nbsp;
+    <div class="dev">
+        &nbsp;
+        <h1 class="dev">Information</h1>
+        <h3 class="dev" id="browser">Browser Type:</h3>
+        <h3 class="dev" id="version">Browser Version: </h1>
+        <h3 class="dev">Author: <a href="https://me.axonz.me">AxonZ</a></h3>
+        
+        &nbsp;
+    </div>
+</body>
+<script>
+
+    function hide (elements) {
+        elements = elements.length ? elements : [elements];
+        for (var index = 0; index < elements.length; index++) {
+            elements[index].style.display = 'none';
+        }
+    }
+
+    function show (elements) {
+        elements = elements.length ? elements : [elements];
+        for (var index = 0; index < elements.length; index++) {
+            elements[index].style.display = 'block';
+        }
+    }
+
+    window.onload = () => {
+        let userAgent = navigator.userAgent;
+        let browserName;
+        let browserVer;
+
+        if(userAgent.match(/chrome|chromium|crios/i)){
+             browserName = "Chromium";
+           }else if(userAgent.match(/firefox|fxios/i)){
+             browserName = "Firefox";
+           }  else if(userAgent.match(/safari/i)){
+             browserName = "Safari";
+           }else if(userAgent.match(/opr\//i)){
+             browserName = "Opera";
+           } else if(userAgent.match(/edg/i)){
+             browserName = "Edge";
+           }else{
+             browserName="Unknown";
+           }
+
+           hide(document.getElementById("nosearch"));
+           hide(document.getElementById("nobrowser"));
+
+        if (userAgent.includes('Firefox/')) {
+            browserVer = userAgent.split('Firefox/')[1]
+        } else if (userAgent.includes('Edg/')) {
+            browserVer = userAgent.split('Edg/')[1]
+        } else if (userAgent.includes('Chrome/')) {
+            browserVer = userAgent.split('Chrome/')[1]
+        } else if (userAgent.includes('Safari/')) {
+            browserVer = userAgent.split('Safari/')[1]
+        }
+        document.getElementById("browser").innerHTML = "Browser Type: " + browserName;
+        document.getElementById("version").innerHTML = "Browser Version: " + browserName + " " + browserVer;
+    }
+
+    
+
+    function ddg() {
+        let userAgent = navigator.userAgent;
+        let browserName;
+
+        if(userAgent.match(/chrome|chromium|crios/i)){
+            browserName = "chrome";
+        }else if(userAgent.match(/firefox|fxios/i)){
+            browserName = "firefox";
+        }  else if(userAgent.match(/safari/i)){
+            browserName = "safari";
+        }else if(userAgent.match(/opr\//i)){
+            browserName = "opera";
+        } else if(userAgent.match(/edg/i)){
+            browserName = "edge";
+        }else{
+            browserName = "Unknown";
+        }
+
+        if(browserName == "Unknown") {
+            show(document.getElementById("nobrowser"));
+        } else {
+            if(!document.getElementById("cable").value) {
+                show(document.getElementById("nosearch"));
+            } else {
+                window.location.href = "https://duckduckgo.com/?va=j&q=" + document.getElementById("cable").value +"&ia=web";
+                document.getElementById("cable").value = "";
+            }
+            
+        }
+        
+    }
+
+    function googli() {
+        let userAgent = navigator.userAgent;
+        let browserName;
+
+        if(userAgent.match(/chrome|chromium|crios/i)){
+            browserName = "chrome";
+        }else if(userAgent.match(/firefox|fxios/i)){
+            browserName = "firefox";
+        }  else if(userAgent.match(/safari/i)){
+            browserName = "safari";
+        }else if(userAgent.match(/opr\//i)){
+            browserName = "opera";
+        } else if(userAgent.match(/edg/i)){
+            browserName = "edge";
+        }else{
+            browserName = "Unknown";
+        }
+
+        if(browserName == "Unknown") {
+            show(document.getElementById("nobrowser"));
+        } else {
+            if(!document.getElementById("cable").value) {
+                show(document.getElementById("nosearch"));
+            } else {
+                window.location.href = "https://www.google.com/search?&q=" + document.getElementById("cable").value;
+                document.getElementById("cable").value = "";
+            }
+        }
+        
+    }
+
+    function bingo() {
+        let userAgent = navigator.userAgent;
+        let browserName;
+
+        if(userAgent.match(/chrome|chromium|crios/i)){
+            browserName = "chrome";
+        }else if(userAgent.match(/firefox|fxios/i)){
+            browserName = "firefox";
+        }  else if(userAgent.match(/safari/i)){
+            browserName = "safari";
+        }else if(userAgent.match(/opr\//i)){
+            browserName = "opera";
+        } else if(userAgent.match(/edg/i)){
+            browserName = "edge";
+        }else{
+            browserName = "Unknown";
+        }
+
+        if(browserName == "Unknown") {
+            show(document.getElementById("nobrowser"));
+        } else {
+            if(!document.getElementById("cable").value) {
+                show(document.getElementById("nosearch"));
+            } else {
+                window.location.href = "https://www.bing.com/search?q=" + document.getElementById("cable").value;
+                document.getElementById("cable").value = "";
+            }
+        }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+        body {
+            background-color: #2b2a33;
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            background-color: #42414d;
+            box-sizing: content-box;
+            padding: 10px;
+            width: 500px;
+            color: white;
+            outline-color: lightsalmon;
+            font-family: 'Poppins', sans-serif;
+            background-image: url(https://cdn.discordapp.com/attachments/953315528980725810/1014928111915249704/search.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px;
+        }
+
+        input:focus {
+            border: none;
+            background-color: #42414d;
+            box-sizing: content-box;
+            text-align: center;
+            color: white;
+            outline-color: lightsalmon;
+            font-family: 'Oxygen Mono', monospace;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-position: 10px;
+            background-size: 30px;
+        }
+
+        h1.t {
+            display: inline-block;
+            box-sizing: content-box;
+            color: white;
+            outline-color: lightsalmon;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p.box {
+            display: inline-block;
+            box-sizing: content-box;
+            padding: 3px;
+            width: 100px;
+            text-align: center;
+            background-position: center;
+            background-color: #616161;
+            color: white;
+            font-family: 'Oxygen Mono', monospace;
+            border-radius: 10px;
+        }
+
+        button.duckduckgo {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: orange;
+            color: white;
+            background-image: url(https://assets.stickpng.com/images/5847f32fcef1014c0b5e4877.png);
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        button.duckduckgo:hover {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(150, 97, 0);
+            color: white;
+            background-image: url(https://assets.stickpng.com/images/5847f32fcef1014c0b5e4877.png);
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        button.google {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(255, 255, 255);
+            color: white;
+            background-image: url(https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png);
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        button.google:hover {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(168, 168, 168);
+            color: white;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        button.bing {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(255, 255, 255);
+            color: #009688;
+            background-image: url(https://iconape.com/wp-content/files/lm/369259/svg/bing-logo-icon-png-svg.png);
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        button.bing:hover {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(168, 168, 168);
+            color: #009688;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        .alert-e {
+            padding: 20px;
+            background-color: #f44336;
+            background-image: url(https://cdn.discordapp.com/attachments/953315528980725810/1014937382438580254/icons8-cancel-100.png);
+            background-repeat: no-repeat;
+            background-position: 5px;
+            background-size: 45px;
+            font-family: 'Oxygen Mono', monospace;
+            /* Red */
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .alert-w {
+            padding: 20px;
+            background-color: orange;
+            background-image: url(https://cdn.discordapp.com/attachments/953315528980725810/1014937381922672640/icons8-error-100.png);
+            background-repeat: no-repeat;
+            background-position: 5px;
+            background-size: 45px;
+            font-family: 'Oxygen Mono', monospace;
+            /* Red */
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .alert-i {
+            padding: 20px;
+            background-color: lightskyblue;
+            background-image: url(https://cdn.discordapp.com/attachments/953315528980725810/1014937381536792636/icons8-info-100.png);
+            background-repeat: no-repeat;
+            background-position: 5px;
+            background-size: 45px;  
+            font-family: 'Oxygen Mono', monospace;
+            /* Red */
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* The close button */
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* When moving the mouse over the close button */
+        .closebtn:hover {
+            color: black;
+        }
+
+        div.dev {
+            background-color: #020202;
+            border-radius: 10px;
+            width: 600px;
+            text-align: center;
+            margin: auto;
+        }
+
+        h1.dev {
+            color: white;
+            font-family: 'Oxygen Mono', monospace;
+            font-weight: 700;
+            font-size: 30px;
+            margin: 0;
+        }
+        
+        h3.dev {
+            color: white;
+            font-family: 'Oxygen Mono', monospace;
+            font-weight: 100;
+            margin: 0;
+        }
+
+        a {
+            color: white;
+        }
