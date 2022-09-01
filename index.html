@@ -20,6 +20,7 @@
     <button onclick="ddg();" class="duckduckgo">DuckDuckGo</button>
     <button onclick="googli();" class="google"><span style="color: #4285F4">G</span><span style="color: #DB4437">o</span><span style="color: #F4B400">o</span><span style="color: #4285F4">g</span><span style="color: #0F9D58">l</span><span style="color: #DB4437">e</span></button>
     <button onclick="bingo();" class="bing">Bing</button>
+    <button onclick="bingo();" class="bar">Go to</button>
     <br>
     &nbsp;
     <br>
@@ -179,6 +180,36 @@
             }
         }
         
+    }
+
+    function bruv() {
+        let userAgent = navigator.userAgent;
+        let browserName;
+
+        if(userAgent.match(/chrome|chromium|crios/i)){
+            browserName = "chrome";
+        }else if(userAgent.match(/firefox|fxios/i)){
+            browserName = "firefox";
+        }  else if(userAgent.match(/safari/i)){
+            browserName = "safari";
+        }else if(userAgent.match(/opr\//i)){
+            browserName = "opera";
+        } else if(userAgent.match(/edg/i)){
+            browserName = "edge";
+        }else{
+            browserName = "Unknown";
+        }
+
+        if(browserName == "Unknown") {
+            show(document.getElementById("nobrowser"));
+        } else {
+            if(!document.getElementById("cable").value) {
+                show(document.getElementById("nosearch"));
+            } else {
+                window.location.href = document.getElementById("cable").value;
+                document.getElementById("cable").value = "";
+            }
+        }
     }
 </script>
 </html>
