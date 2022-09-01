@@ -137,6 +137,33 @@
             width: 160px;
             height: 30px;
         }
+        button.bar {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            background-image: url(https://cdn.discordapp.com/attachments/953315528980725810/1014983047373914162/icons8-align-text-left-1001.png);
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
+        button.bar:hover {
+            font-family: 'Oxygen Mono', monospace;
+            border: none;
+            box-sizing: content-box;
+            background-color: rgb(168, 168, 168);
+            color: black;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 160px;
+            height: 30px;
+        }
+
 
         .alert-e {
             padding: 20px;
